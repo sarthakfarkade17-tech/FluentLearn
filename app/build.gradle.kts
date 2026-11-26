@@ -15,14 +15,12 @@ android {
         versionName = "0.1.0"
     }
     buildFeatures { compose = true }
-    compileOptions{
-        sourceCompatability = JavaVersion.VERSION_17
-        targetCompatability = JavaVersion.VERSION_17
-    }
-    KotlinOptions {
-        jvmTarget = "17"
-    }
 }
+
+kotlin {
+    jvmToolchain(17)
+}
+
 dependencies {
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.activity:activity-compose:1.10.0")
